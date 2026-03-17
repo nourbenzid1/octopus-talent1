@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  /* Template exact color palette - Proshield */
+  --primary-color: #010535;
+  --secondary-color: #F2F2F5;
+  --text-color: #707070;
+  --accent-color: #4D51AB;
+  --accent-secondary-color: #55CEE3;
+  --white-color: #FFFFFF;
+  --divider-color: #F5F5F5;
+  --dark-divider-color: #FFFFFF33;
+  --error-color: rgb(230, 87, 87);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+/* Ensure template styles take precedence */
+.btn-default {
+  transition: all 0.4s ease-in-out;
+}
+
+.section-title h1 span,
+.section-title h2 span {
+  background: linear-gradient(90.15deg, var(--accent-color) 0%, var(--accent-secondary-color) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fix for template-specific layout issues in React */
+.main-header {
+  position: relative;
+  z-index: 100;
+}
+
+.page-header {
+  background: url("/assets/images/real/page-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 150px 0 100px;
+  position: relative;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(270deg, rgba(1, 5, 53, 0.48) 43.57%, rgba(1, 5, 53, 0.9) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+  background: url("/assets/images/real/hero-bg-new.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 140px 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(270deg, rgba(1, 5, 53, 0.48) 43.57%, rgba(1, 5, 53, 0.9) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.why-choose-us {
+  padding: 100px 0;
+  background: url("/assets/images/real/why-choose.jpg"), var(--primary-color);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.testimonial-box {
+  position: relative;
+  background: url("/assets/images/real/hero-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main-footer {
+  background: url("/assets/images/footer-bg.png"), linear-gradient(90.15deg, var(--accent-color) 1.15%, var(--accent-secondary-color) 98.84%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cta-box {
+  background: linear-gradient(90.15deg, var(--accent-color) 1.15%, var(--accent-secondary-color) 98.84%);
+  position: relative;
+  padding: 80px 0;
+}
+
+.cta-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/assets/images/cta-box-arrow.svg") no-repeat;
+  background-position: right center;
+  background-size: cover;
+  width: 300px;
+  height: 100%;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.page-header .page-header-box {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header h1 {
+  color: var(--white-color);
+  font-size: 68px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-header .breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.page-header .breadcrumb li {
+  color: var(--white-color);
+  opacity: 0.8;
+}
+
+.page-header .breadcrumb li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-header .breadcrumb li.active {
+  color: var(--accent-secondary-color);
+}
+
+/* Custom animations for Framer Motion compatibility */
+.motion-container {
+  display: contents;
+}
+
+/* Parallax background utility */
+.parallaxie {
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+/* Section spacing utilities */
+.section-padding {
+  padding: 100px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 42px;
+  }
+}
