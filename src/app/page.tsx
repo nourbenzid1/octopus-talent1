@@ -60,7 +60,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section Start */}
-      <div className="hero parallaxie">
+      <div className="hero parallaxie" style={{ backgroundImage: `url('/assets/images/real/future-visions-business-technology-concept.jpg')` }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-7">

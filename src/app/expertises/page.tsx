@@ -141,7 +141,7 @@ export default function ExpertisesPage() {
       <Header />
 
       {/* Page Header Start */}
-      <div className="page-header parallaxie">
+      <div className="page-header parallaxie" style={{ backgroundImage: `url('/assets/images/real/ai-programs-used-server-room-ensure-optimal-system-performance.jpg')` }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-12">

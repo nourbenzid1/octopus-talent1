@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
           <h2>Nouveau message de contact reçu</h2>
           <p><strong>Nom :</strong> ${firstName} ${lastName}</p>
           <p><strong>Email :</strong> ${email}</p>
-          <p><strong>Téléphone :</strong> ${phone || "Non renseigné"}</p>
+          <p><strong>Téléphone :</strong> ${phone ?? "Non renseigné"}</p>
           <hr />
           <p><strong>Message :</strong></p>
           <p style="white-space: pre-wrap;">${message}</p>

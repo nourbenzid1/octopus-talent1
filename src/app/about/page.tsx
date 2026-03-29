@@ -67,7 +67,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Page Header Start */}
-      <div className="page-header parallaxie">
+      <div className="page-header parallaxie" style={{ backgroundImage: `url('/assets/images/real/advisory-board-members-meeting-boardroom-establish-future-development-plan.jpg')` }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-12">

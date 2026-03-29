@@ -1,32 +1,61 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+interface WOWInstance {
+  init: () => void;
+}
+
+interface WOWConstructor {
+  new (config: {
+    boxClass: string;
+    animateClass: string;
+    offset: number;
+    mobile: boolean;
+    live: boolean;
+  }): WOWInstance;
+}
+
+declare global {
+  interface Window {
+    WOW?: WOWConstructor;
+  }
+}
 
 export default function WOWInitializer() {
+  const pathname = usePathname();
+
   useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 10;
+    
     const initWow = () => {
-      if (typeof window !== "undefined" && "WOW" in window) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const WOW = (window as any).WOW;
-        if (WOW) {
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment
+      if (typeof window !== "undefined" && window.WOW) {
+        const WOW = window.WOW;
+        try {
           const wowInstance = new WOW({
             boxClass: "wow",
             animateClass: "animated",
             offset: 0,
             mobile: true,
-            live: false, // Set to false to prevent issues with re-renders if not needed
+            live: true, // Set to true to handle dynamic content
           });
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           wowInstance.init();
+          console.log("WOW.js initialized successfully");
+        } catch (error) {
+          console.error("Error initializing WOW.js:", error);
         }
+      } else if (retryCount < maxRetries) {
+        retryCount++;
+        setTimeout(initWow, 500);
       }
     };
 
-    // We might need a small delay to ensure scripts are loaded
+    // Initial call
     const timeout = setTimeout(initWow, 500);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [pathname]); // Re-run on pathname change to handle Next.js client-side navigation
 
   return null;
 }

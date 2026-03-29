@@ -59,7 +59,7 @@ export default function TalentsPage() {
       <Header />
 
       {/* Page Header Start */}
-      <div className="page-header parallaxie">
+      <div className="page-header parallaxie" style={{ backgroundImage: `url('/assets/images/real/close-up-computer-scientists-data-center-office-using-ai-automation-tools.jpg')` }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-12">

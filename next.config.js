@@ -18,6 +18,15 @@ const config = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/offers",
+        destination: "/offres",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default config;
