@@ -3,6 +3,7 @@ import Image from "next/image";
 import { db } from "@/server/db";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CandidatureSpontaneeForm from "./CandidatureSpontaneeForm";
 
 export const dynamic = "force-dynamic";
 
@@ -221,22 +222,22 @@ export default async function OffresPage() {
         {/* Candidature Spontanée Section Start */}
         <div style={{ backgroundColor: "var(--secondary-color)", padding: "80px 0" }}>
           <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-8">
-                <div className="section-title">
+            <div className="row section-row">
+              <div className="col-lg-12">
+                <div className="section-title dark-section">
                   <h3 className="wow fadeInUp">Candidature spontanée</h3>
                   <h2 className="wow fadeInUp" data-wow-delay="0.2s">
                     Vous ne trouvez pas l&apos;offre qui vous correspond ?
                   </h2>
-                  <p className="wow fadeInUp" data-wow-delay="0.3s">
+                  <p className="wow fadeInUp" data-wow-delay="0.3s" style={{ color: "rgba(255,255,255,0.75)" }}>
                     Envoyez-nous votre candidature spontanée. Nous sommes toujours à la recherche de profils talentueux pour rejoindre nos missions.
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.4s">
-                <Link href="/contact" className="btn-default btn-highlighted">
-                  Envoyer ma candidature
-                </Link>
+            </div>
+            <div className="row">
+              <div className="col-lg-8 mx-auto">
+                <CandidatureSpontaneeForm />
               </div>
             </div>
           </div>
