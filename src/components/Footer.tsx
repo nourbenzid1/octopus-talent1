@@ -93,8 +93,8 @@ export default function Footer() {
               <h3>Contact</h3>
               <ul>
                 <li>
-                  <a href="mailto:contact@octopustalent.com">
-                    contact@octopustalent.com
+                  <a href="mailto:contact@octopustalent.io">
+                    contact@octopustalent.io
                   </a>
                 </li>
                 <li>Paris, France</li>

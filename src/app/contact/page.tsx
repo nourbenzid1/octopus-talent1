@@ -112,11 +112,11 @@ export default function ContactPage() {
                   </div>
                   <div className="contact-info-content">
                     <h3 style={{ color: "#fff" }}>E-mail</h3>
-                    <p><a href="mailto:contact@octopustalent.com" style={{ 
+                    <p><a href="mailto:contact@octopustalent.io" style={{ 
                       color: "rgba(255,255,255,0.8)",
                       display: "block",
                       wordBreak: "break-all"
-                    }}>contact@octopustalent.com</a></p>
+                    }}>contact@octopustalent.io</a></p>
                   </div>
                 </div>
 
