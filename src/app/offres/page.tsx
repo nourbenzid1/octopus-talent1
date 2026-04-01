@@ -218,6 +218,31 @@ export default async function OffresPage() {
         </div>
         {/* Our Services Section - Offers Grid End */}
 
+        {/* Candidature Spontanée Section Start */}
+        <div style={{ backgroundColor: "var(--secondary-color)", padding: "80px 0" }}>
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-8">
+                <div className="section-title">
+                  <h3 className="wow fadeInUp">Candidature spontanée</h3>
+                  <h2 className="wow fadeInUp" data-wow-delay="0.2s">
+                    Vous ne trouvez pas l&apos;offre qui vous correspond ?
+                  </h2>
+                  <p className="wow fadeInUp" data-wow-delay="0.3s">
+                    Envoyez-nous votre candidature spontanée. Nous sommes toujours à la recherche de profils talentueux pour rejoindre nos missions.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.4s">
+                <Link href="/contact" className="btn-default btn-highlighted">
+                  Envoyer ma candidature
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Candidature Spontanée Section End */}
+
         <Footer />
       </>
     );

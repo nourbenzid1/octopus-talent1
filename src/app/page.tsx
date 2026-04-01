@@ -75,8 +75,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="hero-content-body wow fadeInUp" data-wow-delay="0.6s">
-                  <div className="hero-btn">
-                    <a href="/contact" className="btn-default btn-highlighted">Nous contacter</a>
+                  <div className="hero-btn" style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                    <a href="/contact" className="btn-default btn-highlighted">Je suis une entreprise</a>
+                    <a href="/offres" className="btn-default">Je suis un candidat</a>
                   </div>
                 </div>
               </div>
